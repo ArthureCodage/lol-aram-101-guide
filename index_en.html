@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Primary Meta Tags -->
+    <title>League of Legends - 101 Guide for ARAM & ARAM: MAYHEM | Stats, Items & CC</title>
+    <meta name="title" content="League of Legends - 101 Guide for ARAM & ARAM: MAYHEM | Stats, Items & CC">
+    <meta name="description" content="Comprehensive beginner guide for League of Legends (ARAM & MAYHEM). Master AD vs AP, item anatomy (passives vs actives), life steal vs omnivamp, tenacity, and crowd control.">
+    <meta name="keywords" content="League of Legends, LoL 101, ARAM, ARAM Mayhem, LoL Beginner Guide, AD vs AP, Lethality, Ability Power, Life Steal, Omnivamp, Tenacity, Knockup, LoL Items, Mayhem Augments">
+    <meta name="author" content="ArthureCodage & Antigravity AI">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#070c14">
+
+    <!-- Canonical & Alternate Language URLs -->
+    <link rel="canonical" href="https://arthurecodage.github.io/lol-aram-101-guide/index_en.html">
+    <link rel="alternate" hreflang="fr" href="https://arthurecodage.github.io/lol-aram-101-guide/">
+    <link rel="alternate" hreflang="en" href="https://arthurecodage.github.io/lol-aram-101-guide/index_en.html">
+
+    <!-- Open Graph / Facebook / Discord SEO -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://arthurecodage.github.io/lol-aram-101-guide/index_en.html">
+    <meta property="og:title" content="League of Legends - 101 Guide for ARAM & ARAM: MAYHEM">
+    <meta property="og:description" content="The ultimate guide to mastering stats, items, damage types, and chaotic Augments in League of Legends ARAM Mayhem. HD Infographics included!">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ArthureCodage/lol-aram-101-guide/main/assets/lol_aram_mayhem_banner.jpg">
+    <meta property="og:site_name" content="LoL ARAM 101 Guide">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card SEO -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://arthurecodage.github.io/lol-aram-101-guide/index_en.html">
+    <meta name="twitter:title" content="League of Legends - 101 Guide for ARAM & ARAM: MAYHEM">
+    <meta name="twitter:description" content="The ultimate guide to mastering stats, items, damage types, and chaotic Augments in League of Legends ARAM Mayhem.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/ArthureCodage/lol-aram-101-guide/main/assets/lol_aram_mayhem_banner.jpg">
+
+    <!-- Preconnect & Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data (Schema.org SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Course",
+          "@id": "https://arthurecodage.github.io/lol-aram-101-guide/index_en.html#course",
+          "name": "League of Legends 101 Course: ARAM & ARAM MAYHEM",
+          "description": "Comprehensive course covering AD vs AP scaling, item anatomy, status effects, crowd control, and ARAM Mayhem mechanics.",
+          "provider": {
+            "@type": "Person",
+            "name": "ArthureCodage"
+          },
+          "inLanguage": "en",
+          "educationalLevel": "Beginner",
+          "about": [
+            "League of Legends",
+            "ARAM",
+            "Game Mechanics",
+            "Esports"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://arthurecodage.github.io/lol-aram-101-guide/index_en.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the difference between AD and AP in League of Legends?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AD (Attack Damage - Orange) increases basic attacks and physical abilities countered by Armor. AP (Ability Power - Blue/Purple) increases magic abilities countered by Magic Resist (MR)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why is Knockup (Airborne) the strongest crowd control?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Knockup forces champions airborne and cannot be reduced by Tenacity or cleansed by Cleanse / QSS."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Grievous Wounds work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Grievous Wounds reduces incoming healing and health regeneration on the target by 40%, which is essential against high-sustain champions."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-dark: #070c14;
+            --card-bg: #0d1726;
+            --card-border: #1e2f47;
+            --gold: #c8aa6e;
+            --gold-bright: #f0e6d2;
+            --hextech-blue: #00cfbc;
+            --hextech-cyan: #09b4e3;
+            --ad-red: #ff5252;
+            --ap-blue: #3b82f6;
+            --ap-purple: #a855f7;
+            --true-white: #f3f4f6;
+            --text-muted: #94a3b8;
+            --text-main: #e2e8f0;
+            --green-heal: #10b981;
+            --yellow-cc: #eab308;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        /* Language Switcher Bar */
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .lang-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            text-decoration: none;
+            color: var(--text-muted);
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            color: var(--gold-bright);
+            border-color: var(--gold);
+            background: rgba(200, 170, 110, 0.15);
+        }
+
+        .lang-btn:hover {
+            color: var(--hextech-blue);
+            border-color: var(--hextech-blue);
+        }
+
+        /* Header / Banner */
+        .hero {
+            position: relative;
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(13, 23, 38, 0.8), rgba(7, 12, 20, 0.95));
+            margin-bottom: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .hero-content {
+            padding: 28px 32px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #c8aa6e, #f0e6d2);
+            color: #070c14;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 2px;
+            padding: 4px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            color: var(--gold-bright);
+            text-shadow: 0 2px 10px rgba(200, 170, 110, 0.3);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 18px;
+            color: var(--hextech-blue);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* TOC Nav */
+        .toc-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--hextech-blue);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 32px;
+        }
+
+        .toc-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 20px;
+        }
+
+        .toc-item {
+            font-size: 14px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .toc-item:hover {
+            color: var(--hextech-blue);
+        }
+
+        .toc-number {
+            background: rgba(0, 207, 188, 0.15);
+            color: var(--hextech-blue);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* Section formatting */
+        .section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 32px;
+            page-break-inside: avoid;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid var(--card-border);
+            padding-bottom: 14px;
+            margin-bottom: 20px;
+        }
+
+        .section-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--gold), #785a28);
+            color: #070c14;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            color: var(--gold-bright);
+            letter-spacing: 0.5px;
+        }
+
+        h3 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 18px;
+            color: var(--hextech-blue);
+            margin: 18px 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        /* Image Display */
+        .guide-image {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            margin: 16px 0;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            display: block;
+        }
+
+        /* Comparison Grid */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .stat-box {
+            background: rgba(7, 12, 20, 0.6);
+            border-radius: 8px;
+            padding: 16px;
+            border-top: 3px solid var(--gold);
+        }
+
+        .stat-box.ad {
+            border-top-color: var(--ad-red);
+        }
+
+        .stat-box.ap {
+            border-top-color: var(--ap-blue);
+        }
+
+        .stat-box-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ad .stat-box-title { color: var(--ad-red); }
+        .ap .stat-box-title { color: var(--ap-blue); }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 13px;
+            background: rgba(7, 12, 20, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: rgba(30, 47, 71, 0.8);
+            color: var(--gold-bright);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 10px 14px;
+            text-align: left;
+            border-bottom: 2px solid var(--card-border);
+        }
+
+        td {
+            padding: 10px 14px;
+            border-bottom: 1px solid rgba(30, 47, 71, 0.5);
+            color: var(--text-main);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Badges & Tags */
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: 'Rajdhani', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-ad { background: rgba(255, 82, 82, 0.2); color: var(--ad-red); border: 1px solid rgba(255, 82, 82, 0.4); }
+        .tag-ap { background: rgba(59, 130, 246, 0.2); color: var(--ap-blue); border: 1px solid rgba(59, 130, 246, 0.4); }
+        .tag-true { background: rgba(243, 244, 246, 0.2); color: var(--true-white); border: 1px solid rgba(243, 244, 246, 0.4); }
+        .tag-cc { background: rgba(234, 179, 8, 0.2); color: var(--yellow-cc); border: 1px solid rgba(234, 179, 8, 0.4); }
+
+        /* Callout Box */
+        .callout {
+            background: rgba(0, 207, 188, 0.08);
+            border-left: 4px solid var(--hextech-blue);
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 13.5px;
+        }
+
+        .callout-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            color: var(--hextech-blue);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .callout-warning {
+            background: rgba(255, 82, 82, 0.08);
+            border-left-color: var(--ad-red);
+        }
+        .callout-warning .callout-title {
+            color: var(--ad-red);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 24px 0;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--card-border);
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--hextech-blue);
+            text-decoration: none;
+        }
+
+        /* List styling */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 14px;
+            font-size: 14px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        li strong {
+            color: var(--gold-bright);
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background-color: #070c14 !important;
+                color: #e2e8f0 !important;
+            }
+
+            @page {
+                size: A4 portrait;
+                margin: 12mm 12mm 12mm 12mm;
+            }
+
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 24px;
+            }
+
+            .hero {
+                page-break-inside: avoid;
+            }
+
+            .guide-image {
+                max-width: 100%;
+                height: auto;
+                page-break-inside: avoid;
+            }
+
+            footer, .lang-switch {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<main class="container">
+
+    <!-- LANGUAGE SWITCHER -->
+    <div class="lang-switch">
+        <a href="index.html" class="lang-btn">🇫🇷 Français</a>
+        <a href="index_en.html" class="lang-btn active">🇬🇧 English</a>
+    </div>
+
+    <!-- HERO BANNER -->
+    <header class="hero" id="header">
+        <img src="assets/lol_aram_mayhem_banner.jpg" alt="Epic Howling Abyss ARAM Mayhem banner illustration with Augments cards and magical spells" class="hero-img" width="960" height="280">
+        <div class="hero-content">
+            <span class="hero-badge">101 Guide & Course</span>
+            <h1>League of Legends: The ARAM Player's Handbook</h1>
+            <p class="subtitle">Mastering Stats, Items, and the Chaos of ARAM: MAYHEM</p>
+        </div>
+    </header>
+
+    <!-- TABLE OF CONTENTS NAV -->
+    <nav class="toc-card" aria-label="Course Table of Contents" id="sommaire">
+        <div class="toc-title">
+            <span>📜</span> Course Syllabus
+        </div>
+        <div class="toc-grid">
+            <a href="#introduction" class="toc-item"><span class="toc-number">1</span> <span>Introduction & ARAM Mindset</span></a>
+            <a href="#ad-vs-ap" class="toc-item"><span class="toc-number">2</span> <span>AD vs AP & Damage Types</span></a>
+            <a href="#statistiques" class="toc-item"><span class="toc-number">3</span> <span>Complete Stat Glossary (Pen, Vamp, AH)</span></a>
+            <a href="#objets" class="toc-item"><span class="toc-number">4</span> <span>Item Anatomy (Passives vs Actives)</span></a>
+            <a href="#cc-status" class="toc-item"><span class="toc-number">5</span> <span>Status Effects & Crowd Control</span></a>
+            <a href="#aram-mayhem" class="toc-item"><span class="toc-number">6</span> <span>Special ARAM: MAYHEM (Augments & Strats)</span></a>
+        </div>
+    </nav>
+
+    <!-- MODULE 1 -->
+    <article class="section" id="introduction">
+        <header class="section-header">
+            <div class="section-icon">01</div>
+            <h2>Introduction & ARAM Mindset</h2>
+        </header>
+        <p>Welcome to League of Legends! Unlike classic Summoner's Rift (5v5 across 3 lanes with a jungle), <strong>ARAM (All Random All Mid)</strong> takes place on the Howling Abyss: a single icy lane, 10 champions fighting constantly in one spot, and non-stop teamfighting action!</p>
+        
+        <h3>The 4 Golden Rules of ARAM:</h3>
+        <ul>
+            <li><strong>No Recall (No Back):</strong> You cannot return to fountain to regenerate health. You must die to buy items!</li>
+            <li><strong>Shop Only Upon Death:</strong> Once you leave the spawning platform at the start, the shop closes. To spend your gold, you have to die.</li>
+            <li><strong>Hexgates & Relics:</strong> Use the Hexgates near your Nexus to jump straight into combat. Health relics line the edges of the bridge to heal you and your team.</li>
+            <li><strong>Snowball (Mark / Dash) Summoner Spell:</strong> Throw a snowball! If it hits an enemy, reactivate it to dash directly onto them. Essential tool for Melee Fighters and Tanks!</li>
+        </ul>
+
+        <div class="callout">
+            <div class="callout-title">💡 Beginner Strategist Tip</div>
+            Don't sit on 4,000 gold trying to survive at 50 HP! If your wave is pushed and your allies are nearby, executing or dying cleanly is often the best decision so you can return 15 seconds later with 2 completed items and stomp the enemy team.
+        </div>
+    </article>
+
+    <!-- MODULE 2 -->
+    <article class="section" id="ad-vs-ap">
+        <header class="section-header">
+            <div class="section-icon">02</div>
+            <h2>AD vs AP & Damage Types</h2>
+        </header>
+        <p>In League of Legends, damage and scaling fall into two main families: <strong>Attack Damage (AD)</strong> and <strong>Ability Power (AP)</strong>.</p>
+
+        <img src="assets/lol_stats_ad_ap.jpg" alt="League of Legends comparative infographic: Attack Damage AD vs Ability Power AP with Armor and Magic Resist" class="guide-image" width="960" height="540" loading="lazy">
+
+        <div class="stat-grid">
+            <div class="stat-box ad">
+                <div class="stat-box-title">🗡️ AD (Attack Damage / Physical Damage)</div>
+                <p><strong>Text Color:</strong> Orange / Red</p>
+                <p><strong>What is it?</strong> Increases the damage of your <em>basic attacks</em> (right-click) and physical abilities.</p>
+                <p><strong>Typical Champions:</strong> Marksmen/ADC (Jinx, Caitlyn), Assassins (Zed, Talon), Fighters (Garen, Darius).</p>
+                <p><strong>Countered By:</strong> Armor.</p>
+            </div>
+            <div class="stat-box ap">
+                <div class="stat-box-title">🔮 AP (Ability Power / Magic Damage)</div>
+                <p><strong>Text Color:</strong> Blue / Purple</p>
+                <p><strong>What is it?</strong> Increases the damage of <em>magic spells</em> and AP-scaling abilities.</p>
+                <p><strong>Typical Champions:</strong> Mages (Lux, Veigar, Ahri), AP Assassins (Akali, Katarina), Enchanters.</p>
+                <p><strong>Countered By:</strong> Magic Resist (MR).</p>
+            </div>
+        </div>
+
+        <h3>How to know if an ability scales with AD or AP?</h3>
+        <p>Look at the color of the numbers inside an ability description when hovering your cursor:</p>
+        <ul>
+            <li><strong>Orange Numbers <span class="tag tag-ad">(+AD)</span>:</strong> Scales higher when buying AD items (Swords, Lethality, Crit).</li>
+            <li><strong>Green/Blue Numbers <span class="tag tag-ap">(+AP)</span>:</strong> Scales higher when buying AP items (Staves, Amplifying Tome).</li>
+            <li><strong>Yellow/Dark Green Numbers (+Armor/HP):</strong> Certain tanks (Malphite, Rammus) scale their damage directly off Health or Armor!</li>
+        </ul>
+
+        <h3>The 3 Damage Types:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Damage Type</th>
+                    <th scope="col">On-Screen Color</th>
+                    <th scope="col">Mitigation & Penetration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Physical Damage</strong></td>
+                    <td><span class="tag tag-ad">Orange</span></td>
+                    <td>Reduced by target's Armor. Penetrated by Lethality & % Armor Pen.</td>
+                </tr>
+                <tr>
+                    <td><strong>Magic Damage</strong></td>
+                    <td><span class="tag tag-ap">Blue / Purple</span></td>
+                    <td>Reduced by target's Magic Resist (MR). Penetrated by Magic Penetration.</td>
+                </tr>
+                <tr>
+                    <td><strong>True Damage</strong></td>
+                    <td><span class="tag tag-true">White / Yellow</span></td>
+                    <td><strong>IGNORES ALL ARMOR & MR!</strong> Deals the exact raw damage indicated (e.g. Darius Ultimate, Vayne W).</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <!-- MODULE 3 -->
+    <article class="section" id="statistiques">
+        <header class="section-header">
+            <div class="section-icon">03</div>
+            <h2>Complete Stat Glossary</h2>
+        </header>
+        <p>Here is a straightforward explanation of every other stat found on items:</p>
+
+        <h3>1. Attack Speed & Critical Strike (Offensive AD)</h3>
+        <ul>
+            <li><strong>Attack Speed:</strong> Increases basic attacks per second (e.g. 1.5 = 1.5 attacks/sec).</li>
+            <li><strong>Critical Strike Chance (Crit):</strong> Percentage chance for a basic attack to deal massive bonus damage (+75% to +100%). Capped at 100%.</li>
+        </ul>
+
+        <h3>2. Ability Haste (AH / CDR)</h3>
+        <p>Ability Haste reduces your ability cooldowns, allowing you to cast spells much more frequently!</p>
+
+        <h3>3. Armor Penetration & Magic Penetration</h3>
+        <p>When enemies buy defensive stats (Armor or MR), your damage drops. Penetration stats ignore that defense:</p>
+        <ul>
+            <li><strong>Lethality (Flat Armor Pen):</strong> Subtracts a FLAT amount of Armor. Best against squishy targets without armor items.</li>
+            <li><strong>% Armor Penetration (e.g. Lord Dominik's Regards):</strong> Ignores a PERCENTAGE of total Armor. Essential against heavy Tanks!</li>
+            <li><strong>Magic Penetration (Flat / % MPen):</strong> Same concept but for reducing Magic Resist when playing AP Mages.</li>
+        </ul>
+
+        <h3>4. Sustain: Life Steal, Physical Vamp & Omnivamp</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Stat Name</th>
+                    <th scope="col">How It Heals You</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Life Steal</strong></td>
+                    <td>Heals you exclusively from physical <strong>basic attacks</strong>.</td>
+                </tr>
+                <tr>
+                    <td><strong>Physical Vamp</strong></td>
+                    <td>Heals you from ALL physical damage (basic attacks + physical abilities).</td>
+                </tr>
+                <tr>
+                    <td><strong>Omnivamp</strong></td>
+                    <td>Heals you from <strong>ALL damage dealt</strong> (Physical, Magic, True Damage). <em>(Reduced to 33% efficiency on area-of-effect / AoE damage)</em>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ Anti-Healing Effect: Grievous Wounds</div>
+            If the enemy team has high-healing champions (Aatrox, Warwick, Yuumi, Soraka, Volibear), you MUST buy an item with <strong>Grievous Wounds</strong>. This debuff reduces all incoming healing and health regen on the target by 40%!  
+            <em>Anti-heal items: Executioner's Calling (AD), Oblivion Orb (AP), Bramble Vest / Thornmail (Tank).</em>
+        </div>
+    </article>
+
+    <!-- MODULE 4 -->
+    <article class="section" id="objets">
+        <header class="section-header">
+            <div class="section-icon">04</div>
+            <h2>Item Anatomy: Passives vs Actives</h2>
+        </header>
+        <p>Every completed item grants raw numerical stats, but more importantly, unique item effects.</p>
+
+        <img src="assets/lol_item_anatomy.jpg" alt="Item anatomy diagram explaining League of Legends item card: base stats, unique passives, active abilities, and gold cost" class="guide-image" width="960" height="540" loading="lazy">
+
+        <h3>Item Passives vs Active Abilities:</h3>
+        <ul>
+            <li><strong>Item Passive (Automatic):</strong> Works automatically in the background as long as you own the item. E.g.: <em>"Burn enemies for magic damage when landing a spell"</em> (Liandry's) or <em>"Gain a lifeline shield when dropped below 30% HP"</em> (Sterak's Gage / Shieldbow).</li>
+            <li><strong>Item Active (Manual Hotkey!):</strong> The item is placed in an inventory slot (1 to 6). You MUST press the hotkey to trigger the effect! E.g.: <em>Zhonya's Hourglass (Become invulnerable in stasis for 2.5s)</em> or <em>Hextech Rocketbelt (Dash forward releasing rockets)</em>.</li>
+        </ul>
+
+        <div class="callout">
+            <div class="callout-title">⚠️ Watch Out for Named Passives (Unique Passives)</div>
+            If two items share a passive with the <strong>EXACT SAME NAME</strong> (such as <em>Lifeline</em> or <em>Spellblade</em>), their effects DO NOT stack! You will only get the effect once. Always check passive names.
+        </div>
+    </article>
+
+    <!-- MODULE 5 -->
+    <article class="section" id="cc-status">
+        <header class="section-header">
+            <div class="section-icon">05</div>
+            <h2>Status Effects & Crowd Control (CC)</h2>
+        </header>
+        <p>Crowd Control (CC) includes all status effects and debuffs that hinder enemy movement or actions.</p>
+
+        <img src="assets/lol_status_cc_guide.jpg" alt="League of Legends Crowd Control visual chart: Stun, Root, Silence, Knockup, and Grievous Wounds" class="guide-image" width="960" height="540" loading="lazy">
+
+        <h3>Main CC Effects Breakdown:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">CC Name</th>
+                    <th scope="col">Can Move?</th>
+                    <th scope="col">Can Cast / Attack?</th>
+                    <th scope="col">Key Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="tag tag-cc">Stun</span></td>
+                    <td>❌ Blocked</td>
+                    <td>❌ Blocked</td>
+                    <td>Hard CC. Target is completely incapacitated and unable to act.</td>
+                </tr>
+                <tr>
+                    <td><span class="tag tag-cc">Root / Snare</span></td>
+                    <td>❌ Blocked</td>
+                    <td>✅ Allowed!</td>
+                    <td>Prevents walking or dashing, but target CAN still attack and cast spells!</td>
+                </tr>
+                <tr>
+                    <td><span class="tag tag-cc">Silence</span></td>
+                    <td>✅ Allowed</td>
+                    <td>❌ Spells Blocked</td>
+                    <td>Prevents casting abilities. Target can still walk and basic attack.</td>
+                </tr>
+                <tr>
+                    <td><span class="tag tag-cc">Knockup (Airborne)</span></td>
+                    <td>❌ Blocked</td>
+                    <td>❌ Blocked</td>
+                    <td><strong>THE KING OF CC!</strong> Target is knocked into the air. <em>Cannot be reduced by Tenacity or cleansed by Cleanse/QSS!</em></td>
+                </tr>
+                <tr>
+                    <td><span class="tag tag-cc">Suppression</span></td>
+                    <td>❌ Blocked</td>
+                    <td>❌ Blocked</td>
+                    <td>(e.g. Malzahar, Warwick Ultimates). Cannot be cleansed by Cleanse spell. Requires <em>Quicksilver Sash (QSS)</em>.</td>
+                </tr>
+                <tr>
+                    <td><span class="tag tag-cc">Blind</span></td>
+                    <td>✅ Allowed</td>
+                    <td>Attacks Miss</td>
+                    <td>(e.g. Teemo Q). Basic attacks miss completely and deal 0 damage for the duration.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>What is Tenacity?</h3>
+        <p><strong>Tenacity</strong> is a defensive stat that reduces the DURATION of Stuns, Roots, Silences, and Slows! If you have 30% Tenacity, a 2-second Stun will only last 1.4 seconds. <em>(Note: Does NOT reduce Airborne/Knockup or Suppression duration).</em></p>
+    </article>
+
+    <!-- MODULE 6 -->
+    <article class="section" id="aram-mayhem">
+        <header class="section-header">
+            <div class="section-icon">06</div>
+            <h2>Special ARAM: MAYHEM (Augments & Chaos)</h2>
+        </header>
+        <p><strong>ARAM: MAYHEM</strong> takes ARAM madness to the next level by introducing the <strong>Augment System</strong>!</p>
+
+        <h3>1. Augment Tiers</h3>
+        <p>Throughout the match, you get to select from 3 random Augment cards. They come in 3 tiers of power:</p>
+        <ul>
+            <li><strong>Silver Tier:</strong> Solid stat boosts, ability haste, movement speed, or utility.</li>
+            <li><strong>Gold Tier:</strong> Powerful game-altering passives (e.g. abilities applying on-hit effects, massive shields, cooldown resets).</li>
+            <li><strong>Prismatic Tier:</strong> Game-changing abilities (e.g. double ultimate casts, true damage scaling, temporary invulnerability).</li>
+        </ul>
+
+        <h3>2. Prismatic Items</h3>
+        <p>In ARAM: Mayhem, you can also acquire <strong>Prismatic Items</strong> featuring over-the-top stats and amplified passive effects.</p>
+
+        <h3>3. Pro Tips to Win in ARAM: MAYHEM:</h3>
+        <ol>
+            <li><strong>Prioritize Synergy Over Rarity:</strong> A Gold or Silver Augment that perfectly fits your champion's kit is often much stronger than a random Prismatic Augment!</li>
+            <li><strong>Adapt Your Item Build:</strong> If an Augment gives your basic attacks AP scaling, consider building Attack Speed + AP items!</li>
+            <li><strong>Embrace Wild Combos:</strong> Don't stick strictly to traditional recommended builds. Mayhem is designed for testing chaotic and fun builds!</li>
+        </ol>
+    </article>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 League of Legends - 101 ARAM & MAYHEM Guide. Maintained by <a href="https://github.com/ArthureCodage" target="_blank" rel="noopener">ArthureCodage</a>.</p>
+        <p>Download the <a href="League_of_Legends_ARAM_101_Guide_EN.pdf" download>English PDF Guide (4.4 MB)</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
