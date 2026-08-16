@@ -1,9 +1,10 @@
 # 🎮 League of Legends - Cours 101 ARAM & ARAM: MAYHEM
 
-![League of Legends](https://img.shields.io/badge/Game-League%20of%20Legends-blue?style=for-the-badge&logo=leagueoflegends)
-![Mode](https://img.shields.io/badge/Mode-ARAM%20%26%20MAYHEM-cyan?style=for-the-badge)
-![Format](https://img.shields.io/badge/Format-PDF%20%2B%20HTML-gold?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+[![League of Legends](https://img.shields.io/badge/Game-League%20of%20Legends-blue?style=for-the-badge&logo=leagueoflegends)](https://eune.leagueoflegends.com/)
+[![Mode](https://img.shields.io/badge/Mode-ARAM%20%26%20MAYHEM-cyan?style=for-the-badge)](#-sommaire-du-cours)
+[![Format](https://img.shields.io/badge/Format-PDF%20%2B%20HTML-gold?style=for-the-badge)](#-g%C3%A9n%C3%A9ration-du-pdf-en-local)
+[![SEO Ready](https://img.shields.io/badge/SEO-Optimized-brightgreen?style=for-the-badge)](index.html)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 Un guide complet, pédagogique et visuellement travaillé pour enseigner League of Legends à un ami débutant, spécialement conçu pour les joueurs de **ARAM (All Random All Mid)** et du mode spécial **ARAM: MAYHEM**.
 
@@ -22,28 +23,35 @@ Un guide complet, pédagogique et visuellement travaillé pour enseigner League 
 
 ## 📜 Sommaire du Cours
 
-1. **Introduction & Mentalité ARAM**
+1. **[Introduction & Mentalité ARAM](index.html#introduction)**
    - Les 4 règles d'or (No Back, Achat à la mort, Portails Hextech, Snowball/Marquage).
    - Gestion de l'or et timing de mort stratégique.
-2. **AD vs AP & Types de Dégâts**
+2. **[AD vs AP & Types de Dégâts](index.html#ad-vs-ap)**
    - Distinguer les dégâts AD, AP et Bruts (True Damage).
    - Comment identifier si une compétence demande de l'AD ou de l'AP.
-3. **Le Dictionnaire Complet des Statistiques**
+3. **[Le Dictionnaire Complet des Statistiques](index.html#statistiques)**
    - Vitesse d'Attaque & Coup Critique.
    - Hâte de compétence (Ability Haste / CDR).
    - Léthalité vs Pénétration d'Armure en %.
    - Vol de Vie, Vampirisme Physique & Omnivamp.
    - L'effet Anti-Soin : **Hémorragie (Grievous Wounds)**.
-4. **Anatomie des Objets (Passifs vs Actifs)**
+4. **[Anatomie des Objets (Passifs vs Actifs)](index.html#objets)**
    - Effets automatiques vs Boutons à presser (raccourcis 1-6).
    - Règle d'or sur les Passifs Nommés (Unique Passives).
-5. **Altérations d'État & Contrôles de Foule (CC)**
+5. **[Altérations d'État & Contrôles de Foule (CC)](index.html#cc-status)**
    - Hard CC vs Soft CC.
    - Pourquoi le Knockup est le roi des CC.
    - Rôle et fonctionnement de la Ténacité.
-6. **Spécial ARAM: MAYHEM**
+6. **[Spécial ARAM: MAYHEM](index.html#aram-mayhem)**
    - Comprendre le système d'Augments (Argent, Or, Prismatique).
    - Synergies avec les Objets Prismatiques.
+
+---
+
+## 🔍 Mots-clés & Thématiques SEO (Search Engine Optimization)
+
+- **Mots-clés principaux :** `League of Legends`, `Guide LoL débutant 101`, `ARAM Mayhem`, `AD vs AP LoL`, `Vol de vie vs Omnivamp`, `Knockup Ténacité`, `Objets passifs et actifs LoL`, `Hémorragie Grievous Wounds`.
+- **Balisage sémantique :** HTML5 (`<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`), métadonnées Open Graph & Twitter Cards, microdonnées JSON-LD Schema.org (`Course`, `FAQPage`).
 
 ---
 
@@ -59,7 +67,7 @@ Ce dépôt inclut une page web HTML/CSS moderne avec un thème esport sombre, ai
 
 ```bash
 # 1. Cloner le dépôt
-git clone https://github.com/votre-username/lol-aram-101-guide.git
+git clone https://github.com/ArthureCodage/lol-aram-101-guide.git
 cd lol-aram-101-guide
 
 # 2. Installer les dépendances
@@ -83,7 +91,9 @@ lol-aram-101-guide/
 │   ├── lol_item_anatomy.jpg
 │   ├── lol_status_cc_guide.jpg
 │   └── lol_aram_mayhem_banner.jpg
-├── index.html                           # Cours complet au format HTML/CSS
+├── index.html                           # Cours complet au format HTML/CSS (SEO Ready)
+├── sitemap.xml                          # Sitemap XML pour Google / Bing
+├── robots.txt                           # Fichier d'instructions robots de recherche
 ├── generate_pdf.js                      # Script de compilation PDF via Puppeteer/Edge
 ├── League_of_Legends_ARAM_101_Guide.pdf # Document PDF final compilé
 ├── package.json

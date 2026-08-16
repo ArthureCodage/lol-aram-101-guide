@@ -1,12 +1,99 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>League of Legends - Cours 101 ARAM & ARAM: MAYHEM</title>
+
+    <!-- SEO Primary Meta Tags -->
+    <title>League of Legends - Cours 101 ARAM & ARAM: MAYHEM | Guide Stats, Items & CC</title>
+    <meta name="title" content="League of Legends - Cours 101 ARAM & ARAM: MAYHEM | Guide Stats, Items & CC">
+    <meta name="description" content="Guide pédagogique complet pour débutant sur League of Legends (ARAM & MAYHEM). Apprenez la différence entre AD et AP, les objets passifs/actifs, le vol de vie, la ténacité et les altérations d'état (CC).">
+    <meta name="keywords" content="League of Legends, LoL 101, ARAM, ARAM Mayhem, Guide LoL débutant, AD vs AP, Léthalité, Puissance magique, Vol de vie, Omnivamp, Ténacité, Knockup, Objets LoL, Augments Mayhem">
+    <meta name="author" content="ArthureCodage & Antigravity AI">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#070c14">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://arthurecodage.github.io/lol-aram-101-guide/">
+
+    <!-- Open Graph / Facebook / Discord SEO -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://arthurecodage.github.io/lol-aram-101-guide/">
+    <meta property="og:title" content="League of Legends - Cours 101 ARAM & ARAM: MAYHEM">
+    <meta property="og:description" content="Le manuel ultime pour maîtriser les statistiques, les objets, les types de dégâts et le chaos du mode ARAM Mayhem dans League of Legends. Infographies HD incluses !">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ArthureCodage/lol-aram-101-guide/main/assets/lol_aram_mayhem_banner.jpg">
+    <meta property="og:site_name" content="LoL ARAM 101 Guide">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card SEO -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://arthurecodage.github.io/lol-aram-101-guide/">
+    <meta name="twitter:title" content="League of Legends - Cours 101 ARAM & ARAM: MAYHEM">
+    <meta name="twitter:description" content="Le manuel ultime pour maîtriser les statistiques, les objets, les types de dégâts et le chaos du mode ARAM Mayhem.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/ArthureCodage/lol-aram-101-guide/main/assets/lol_aram_mayhem_banner.jpg">
+
+    <!-- Preconnect & Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data (Schema.org SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Course",
+          "@id": "https://arthurecodage.github.io/lol-aram-101-guide/#course",
+          "name": "League of Legends Cours 101 : ARAM & ARAM MAYHEM",
+          "description": "Formation complète pour comprendre l'AD vs AP, l'anatomie des objets, les altérations d'état et le fonctionnement d'ARAM Mayhem.",
+          "provider": {
+            "@type": "Person",
+            "name": "ArthureCodage"
+          },
+          "inLanguage": "fr",
+          "educationalLevel": "Beginner",
+          "about": [
+            "League of Legends",
+            "ARAM",
+            "Game Mechanics",
+            "Esports"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://arthurecodage.github.io/lol-aram-101-guide/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Quelle est la différence entre AD et AP dans League of Legends ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'AD (Attack Damage / Dégâts Physiques - Orange) augmente les auto-attaques et sorts physiques contrés par l'Armure. L'AP (Ability Power / Puissance Magique - Bleu/Violet) augmente la puissance des sorts magiques contrés par la Résistance Magique (RM)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Pourquoi le Knockup (Projection) est-il le contrôle de foule le plus puissant ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le Knockup projette le champion dans les airs et ne peut pas être réduit par la Ténacité ni annulé par le sort d'invocateur Purge (Cleanse)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment fonctionne l'effet Hémorragie (Grievous Wounds) ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'effet Hémorragie réduit tous les soins et régénérations de PV reçus par la cible de 40%, ce qui est indispensable contre les champions à fort sustain."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root {
             --bg-dark: #070c14;
@@ -105,7 +192,7 @@
             letter-spacing: 1.5px;
         }
 
-        /* TOC */
+        /* TOC Nav */
         .toc-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -139,6 +226,12 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .toc-item:hover {
+            color: var(--hextech-blue);
         }
 
         .toc-number {
@@ -331,6 +424,21 @@
             color: var(--ad-red);
         }
 
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 24px 0;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--card-border);
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--hextech-blue);
+            text-decoration: none;
+        }
+
         /* List styling */
         ul, ol {
             margin-left: 20px;
@@ -372,44 +480,48 @@
                 height: auto;
                 page-break-inside: avoid;
             }
+
+            footer {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+<main class="container">
 
     <!-- HERO BANNER -->
-    <div class="hero">
-        <img src="assets/lol_aram_mayhem_banner.jpg" alt="ARAM Mayhem Banner" class="hero-img">
+    <header class="hero" id="header">
+        <img src="assets/lol_aram_mayhem_banner.jpg" alt="Illustration épique de l'Abîme Hurlant ARAM Mayhem avec des cartes d'Augments et des sorts magiques" class="hero-img" width="960" height="280">
         <div class="hero-content">
-            <div class="hero-badge">Guide Pédagogique 101</div>
+            <span class="hero-badge">Guide Pédagogique 101 & SEO</span>
             <h1>League of Legends : Le Manuel du Joueur ARAM</h1>
-            <div class="subtitle">Maîtriser les Statistiques, les Objets et le Chaos d'ARAM: MAYHEM</div>
+            <p class="subtitle">Maîtriser les Statistiques, les Objets et le Chaos d'ARAM: MAYHEM</p>
         </div>
-    </div>
+    </header>
 
-    <!-- TABLE OF CONTENTS -->
-    <div class="toc-card">
+    <!-- TABLE OF CONTENTS NAV -->
+    <nav class="toc-card" aria-label="Sommaire de la formation" id="sommaire">
         <div class="toc-title">
             <span>📜</span> Sommaire de la Formation
         </div>
         <div class="toc-grid">
-            <div class="toc-item"><div class="toc-number">1</div> <span>Introduction & Mentalité ARAM</span></div>
-            <div class="toc-item"><div class="toc-number">2</div> <span>AD vs AP & Types de Dégâts</span></div>
-            <div class="toc-item"><div class="toc-number">3</div> <span>Toutes les Stats (Pen, Sustain, Hâte, Def)</span></div>
-            <div class="toc-item"><div class="toc-number">4</div> <span>Anatomie des Objets (Passifs vs Actifs)</span></div>
-            <div class="toc-item"><div class="toc-number">5</div> <span>Altérations d'État & Contrôles de Foule</span></div>
-            <div class="toc-item"><div class="toc-number">6</div> <span>Spécial ARAM: MAYHEM (Augments & Strats)</span></div>
+            <a href="#introduction" class="toc-item"><span class="toc-number">1</span> <span>Introduction & Mentalité ARAM</span></a>
+            <a href="#ad-vs-ap" class="toc-item"><span class="toc-number">2</span> <span>AD vs AP & Types de Dégâts</span></a>
+            <a href="#statistiques" class="toc-item"><span class="toc-number">3</span> <span>Toutes les Stats (Pen, Sustain, Hâte, Def)</span></a>
+            <a href="#objets" class="toc-item"><span class="toc-number">4</span> <span>Anatomie des Objets (Passifs vs Actifs)</span></a>
+            <a href="#cc-status" class="toc-item"><span class="toc-number">5</span> <span>Altérations d'État & Contrôles de Foule</span></a>
+            <a href="#aram-mayhem" class="toc-item"><span class="toc-number">6</span> <span>Spécial ARAM: MAYHEM (Augments & Strats)</span></a>
         </div>
-    </div>
+    </nav>
 
     <!-- MODULE 1 -->
-    <div class="section">
-        <div class="section-header">
+    <article class="section" id="introduction">
+        <header class="section-header">
             <div class="section-icon">01</div>
             <h2>Introduction & Mentalité ARAM</h2>
-        </div>
+        </header>
         <p>Bienvenue dans League of Legends ! Contrairement à la Faille de l'Invocateur classique (5v5 sur 3 voies avec jungle), l'<strong>ARAM (All Random All Mid)</strong> se déroule sur l'Abîme Hurlant : une seule voie enneigée, 10 champions en permanence au même endroit, et du combat non-stop !</p>
         
         <h3>Les 4 Règles d'Or de l'ARAM :</h3>
@@ -424,17 +536,17 @@
             <div class="callout-title">💡 Conseil de Stratège débutant</div>
             Ne garde pas 4 000 pièces d'or sur toi en essayant de survivre avec 50 PV ! Si la vague de sbires est poussée et que tes alliés sont là, c'est parfois une excellente décision de mourir pour revenir 15 secondes plus tard avec 2 objets complets et balayer l'équipe adverse.
         </div>
-    </div>
+    </article>
 
     <!-- MODULE 2 -->
-    <div class="section">
-        <div class="section-header">
+    <article class="section" id="ad-vs-ap">
+        <header class="section-header">
             <div class="section-icon">02</div>
             <h2>AD vs AP & Types de Dégâts</h2>
-        </div>
+        </header>
         <p>Dans League of Legends, les dégâts et la puissance de ton champion reposent sur deux grandes familles : les <strong>Dégâts d'Attaque (AD)</strong> et la <strong>Puissance Magique (AP)</strong>.</p>
 
-        <img src="assets/lol_stats_ad_ap.jpg" alt="AD vs AP Infographic" class="guide-image">
+        <img src="assets/lol_stats_ad_ap.jpg" alt="Infographie comparative League of Legends : Attack Damage AD vs Ability Power AP avec Armure et Résistance Magique" class="guide-image" width="960" height="540" loading="lazy">
 
         <div class="stat-grid">
             <div class="stat-box ad">
@@ -465,9 +577,9 @@
         <table>
             <thead>
                 <tr>
-                    <th>Type de Dégâts</th>
-                    <th>Couleur à l'écran</th>
-                    <th>Propriété & Réduction</th>
+                    <th scope="col">Type de Dégâts</th>
+                    <th scope="col">Couleur à l'écran</th>
+                    <th scope="col">Propriété & Réduction</th>
                 </tr>
             </thead>
             <tbody>
@@ -488,14 +600,14 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </article>
 
     <!-- MODULE 3 -->
-    <div class="section">
-        <div class="section-header">
+    <article class="section" id="statistiques">
+        <header class="section-header">
             <div class="section-icon">03</div>
             <h2>Le Dictionnaire Complet des Statistiques</h2>
-        </div>
+        </header>
         <p>Voici l'explication simple de toutes les autres statistiques inscrites sur vos objets :</p>
 
         <h3>1. Vitesse d'Attaque & Coup Critique (Offensif AD)</h3>
@@ -519,8 +631,8 @@
         <table>
             <thead>
                 <tr>
-                    <th>Statistique</th>
-                    <th>Comment ça fonctionne ?</th>
+                    <th scope="col">Statistique</th>
+                    <th scope="col">Comment ça fonctionne ?</th>
                 </tr>
             </thead>
             <tbody>
@@ -544,17 +656,17 @@
             Si l'équipe adverse possède des champions qui se soignent énormément (Aatrox, Warwick, Yuumi, Soraka, Volibear), tu DOIS acheter un objet avec l'effet <strong>Hémorragie (Grievous Wounds)</strong>. Cet effet réduit tous les soins reçus par la cible de 40% !<br>
             <em>Exemples d'objets anti-soin : Marque-bourreau (AD), Orbe d'oubli (AP), Vêtement de ronces / Cotte de mailles (Tank).</em>
         </div>
-    </div>
+    </article>
 
     <!-- MODULE 4 -->
-    <div class="section">
-        <div class="section-header">
+    <article class="section" id="objets">
+        <header class="section-header">
             <div class="section-icon">04</div>
             <h2>Anatomie des Objets : Passifs vs Actifs</h2>
-        </div>
+        </header>
         <p>Dans la boutique de League of Legends, chaque objet complet apporte des statistiques brutes, mais surtout des effets uniques.</p>
 
-        <img src="assets/lol_item_anatomy.jpg" alt="Item Anatomy Infographic" class="guide-image">
+        <img src="assets/lol_item_anatomy.jpg" alt="Schéma expliquant l'anatomie d'une fiche d'objet dans League of Legends : stats de base, passifs uniques, capacités actives et coût en or" class="guide-image" width="960" height="540" loading="lazy">
 
         <h3>Passif vs Actif d'un Objet :</h3>
         <ul>
@@ -566,26 +678,26 @@
             <div class="callout-title">⚠️ Attention aux Passifs Nommés (Unique Passives)</div>
             Si deux objets ont un passif avec le <strong>MÊME NOM</strong> (par exemple <em>Lame d'Ombre</em> ou <em>Ligne de Vie</em>), leurs effets ne se cumulent PAS ! Tu ne recevras l'effet qu'une seule fois. Vérifie toujours le nom des passifs.
         </div>
-    </div>
+    </article>
 
     <!-- MODULE 5 -->
-    <div class="section">
-        <div class="section-header">
+    <article class="section" id="cc-status">
+        <header class="section-header">
             <div class="section-icon">05</div>
             <h2>Altérations d'État & Contrôles de Foule (CC)</h2>
-        </div>
+        </header>
         <p>Les Contrôles de Foule (Crowd Control ou CC) sont les sortilèges d'entrave qui empêchent un ennemi de jouer ou de se déplacer.</p>
 
-        <img src="assets/lol_status_cc_guide.jpg" alt="CC Guide Infographic" class="guide-image">
+        <img src="assets/lol_status_cc_guide.jpg" alt="Tableau visuel des altérations d'état dans League of Legends : Stun, Root, Silence, Knockup et Grievous Wounds" class="guide-image" width="960" height="540" loading="lazy">
 
         <h3>Les Principaux Effets de CC :</h3>
         <table>
             <thead>
                 <tr>
-                    <th>Nom du CC</th>
-                    <th>Déplacement ?</th>
-                    <th>Sorts & Attaques ?</th>
-                    <th>Notes & Détails</th>
+                    <th scope="col">Nom du CC</th>
+                    <th scope="col">Déplacement ?</th>
+                    <th scope="col">Sorts & Attaques ?</th>
+                    <th scope="col">Notes & Détails</th>
                 </tr>
             </thead>
             <tbody>
@@ -630,14 +742,14 @@
 
         <h3>Qu'est-ce que la Ténacité (Tenacity) ?</h3>
         <p>La <strong>Ténacité</strong> est une statistique défensive qui réduit la DURÉE des Stuns, Roots, Silences et Ralentissements ! Si tu as 30% de Ténacité, un Stun de 2 secondes ne durera que 1.4 seconde sur toi. <em>(Attention : n'affecte pas les Knockups ni les Suppressions).</em></p>
-    </div>
+    </article>
 
     <!-- MODULE 6 -->
-    <div class="section">
-        <div class="section-header">
+    <article class="section" id="aram-mayhem">
+        <header class="section-header">
             <div class="section-icon">06</div>
             <h2>Spécial ARAM: MAYHEM (Optimisations & Chaos)</h2>
-        </div>
+        </header>
         <p>Le mode <strong>ARAM: MAYHEM</strong> pousse le chaos d'ARAM au niveau supérieur en introduisant le système des <strong>Optimisations (Augments)</strong> !</p>
 
         <h3>1. Les Tiers d'Optimisations (Augments)</h3>
@@ -649,7 +761,7 @@
         </ul>
 
         <h3>2. Objets Prismatiques</h3>
-        <p>Dans ARAM: Mayhem, tu peux également acquérir ou tirer au sort des <strong>Objets Prismatiques</strong>. Ce me sont des objets ultra-puissants dotés de statistiques hors-normes et d'effets passifs démultipliés.</p>
+        <p>Dans ARAM: Mayhem, tu peux également acquérir ou tirer au sort des <strong>Objets Prismatiques</strong>. Ce sont des objets ultra-puissants dotés de statistiques hors-normes et d'effets passifs démultipliés.</p>
 
         <h3>3. Conseils Pro pour Gagner en ARAM: MAYHEM :</h3>
         <ol>
@@ -657,9 +769,16 @@
             <li><strong>Adapte ton Build :</strong> Si tu obtiens une Augment qui donne des ratios AP sur tes auto-attaques, envisage de faire des objets Vitesse d'Attaque + AP !</li>
             <li><strong>Amuse-toi avec les Combos :</strong> Ne reste pas bloqué sur les builds recommandés traditionnels. ARAM Mayhem est fait pour tester des combinaisons complètement déjantées.</li>
         </ol>
-    </div>
+    </article>
 
-</div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 League of Legends - Cours 101 ARAM & MAYHEM. Développé par <a href="https://github.com/ArthureCodage" target="_blank" rel="noopener">ArthureCodage</a>.</p>
+        <p>Télécharger le <a href="League_of_Legends_ARAM_101_Guide.pdf" download>Guide PDF Complet (4.4 MB)</a></p>
+    </div>
+</footer>
 
 </body>
 </html>

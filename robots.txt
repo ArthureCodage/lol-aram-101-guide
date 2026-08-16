@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arthurecodage.github.io/lol-aram-101-guide/sitemap.xml

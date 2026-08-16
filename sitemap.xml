@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://arthurecodage.github.io/lol-aram-101-guide/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://raw.githubusercontent.com/ArthureCodage/lol-aram-101-guide/main/assets/lol_aram_mayhem_banner.jpg</image:loc>
+      <image:title>League of Legends ARAM Mayhem Banner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://raw.githubusercontent.com/ArthureCodage/lol-aram-101-guide/main/assets/lol_stats_ad_ap.jpg</image:loc>
+      <image:title>AD vs AP Infographic</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://raw.githubusercontent.com/ArthureCodage/lol-aram-101-guide/main/assets/lol_item_anatomy.jpg</image:loc>
+      <image:title>Item Anatomy Infographic</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://raw.githubusercontent.com/ArthureCodage/lol-aram-101-guide/main/assets/lol_status_cc_guide.jpg</image:loc>
+      <image:title>Crowd Control and Status Effects Chart</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://arthurecodage.github.io/lol-aram-101-guide/League_of_Legends_ARAM_101_Guide.pdf</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
