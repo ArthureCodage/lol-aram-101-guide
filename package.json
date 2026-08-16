@@ -1,0 +1,24 @@
+{
+  "name": "lol-aram-101-guide",
+  "version": "1.0.0",
+  "description": "Guide complet League of Legends 101 avec focus ARAM et ARAM: MAYHEM, infographies HD et export PDF.",
+  "main": "index.html",
+  "scripts": {
+    "build:pdf": "node generate_pdf.js",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "league-of-legends",
+    "lol",
+    "aram",
+    "aram-mayhem",
+    "guide",
+    "infographic",
+    "pdf"
+  ],
+  "author": "Antigravity AI & User",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer-core": "^24.1.0"
+  }
+}

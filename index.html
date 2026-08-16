@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends - Cours 101 ARAM & ARAM: MAYHEM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #070c14;
+            --card-bg: #0d1726;
+            --card-border: #1e2f47;
+            --gold: #c8aa6e;
+            --gold-bright: #f0e6d2;
+            --hextech-blue: #00cfbc;
+            --hextech-cyan: #09b4e3;
+            --ad-red: #ff5252;
+            --ap-blue: #3b82f6;
+            --ap-purple: #a855f7;
+            --true-white: #f3f4f6;
+            --text-muted: #94a3b8;
+            --text-main: #e2e8f0;
+            --green-heal: #10b981;
+            --yellow-cc: #eab308;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        /* Header / Banner */
+        .hero {
+            position: relative;
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(13, 23, 38, 0.8), rgba(7, 12, 20, 0.95));
+            margin-bottom: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .hero-content {
+            padding: 28px 32px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #c8aa6e, #f0e6d2);
+            color: #070c14;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 2px;
+            padding: 4px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            color: var(--gold-bright);
+            text-shadow: 0 2px 10px rgba(200, 170, 110, 0.3);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 18px;
+            color: var(--hextech-blue);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* TOC */
+        .toc-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--hextech-blue);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 32px;
+        }
+
+        .toc-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 20px;
+        }
+
+        .toc-item {
+            font-size: 14px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-number {
+            background: rgba(0, 207, 188, 0.15);
+            color: var(--hextech-blue);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* Section formatting */
+        .section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 32px;
+            page-break-inside: avoid;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid var(--card-border);
+            padding-bottom: 14px;
+            margin-bottom: 20px;
+        }
+
+        .section-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--gold), #785a28);
+            color: #070c14;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            color: var(--gold-bright);
+            letter-spacing: 0.5px;
+        }
+
+        h3 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 18px;
+            color: var(--hextech-blue);
+            margin: 18px 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        /* Image Display */
+        .guide-image {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            margin: 16px 0;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            display: block;
+        }
+
+        /* Comparison Grid */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .stat-box {
+            background: rgba(7, 12, 20, 0.6);
+            border-radius: 8px;
+            padding: 16px;
+            border-top: 3px solid var(--gold);
+        }
+
+        .stat-box.ad {
+            border-top-color: var(--ad-red);
+        }
+
+        .stat-box.ap {
+            border-top-color: var(--ap-blue);
+        }
+
+        .stat-box-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ad .stat-box-title { color: var(--ad-red); }
+        .ap .stat-box-title { color: var(--ap-blue); }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 13px;
+            background: rgba(7, 12, 20, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: rgba(30, 47, 71, 0.8);
+            color: var(--gold-bright);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 10px 14px;
+            text-align: left;
+            border-bottom: 2px solid var(--card-border);
+        }
+
+        td {
+            padding: 10px 14px;
+            border-bottom: 1px solid rgba(30, 47, 71, 0.5);
+            color: var(--text-main);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Badges & Tags */
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: 'Rajdhani', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-ad { background: rgba(255, 82, 82, 0.2); color: var(--ad-red); border: 1px solid rgba(255, 82, 82, 0.4); }
+        .tag-ap { background: rgba(59, 130, 246, 0.2); color: var(--ap-blue); border: 1px solid rgba(59, 130, 246, 0.4); }
+        .tag-true { background: rgba(243, 244, 246, 0.2); color: var(--true-white); border: 1px solid rgba(243, 244, 246, 0.4); }
+        .tag-cc { background: rgba(234, 179, 8, 0.2); color: var(--yellow-cc); border: 1px solid rgba(234, 179, 8, 0.4); }
+
+        /* Callout Box */
+        .callout {
+            background: rgba(0, 207, 188, 0.08);
+            border-left: 4px solid var(--hextech-blue);
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 13.5px;
+        }
+
+        .callout-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            color: var(--hextech-blue);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .callout-warning {
+            background: rgba(255, 82, 82, 0.08);
+            border-left-color: var(--ad-red);
+        }
+        .callout-warning .callout-title {
+            color: var(--ad-red);
+        }
+
+        /* List styling */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 14px;
+            font-size: 14px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        li strong {
+            color: var(--gold-bright);
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background-color: #070c14 !important;
+                color: #e2e8f0 !important;
+            }
+
+            @page {
+                size: A4 portrait;
+                margin: 12mm 12mm 12mm 12mm;
+            }
+
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 24px;
+            }
+
+            .hero {
+                page-break-inside: avoid;
+            }
+
+            .guide-image {
+                max-width: 100%;
+                height: auto;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HERO BANNER -->
+    <div class="hero">
+        <img src="assets/lol_aram_mayhem_banner.jpg" alt="ARAM Mayhem Banner" class="hero-img">
+        <div class="hero-content">
+            <div class="hero-badge">Guide Pédagogique 101</div>
+            <h1>League of Legends : Le Manuel du Joueur ARAM</h1>
+            <div class="subtitle">Maîtriser les Statistiques, les Objets et le Chaos d'ARAM: MAYHEM</div>
+        </div>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc-card">
+        <div class="toc-title">
+            <span>📜</span> Sommaire de la Formation
+        </div>
+        <div class="toc-grid">
+            <div class="toc-item"><div class="toc-number">1</div> <span>Introduction & Mentalité ARAM</span></div>
+            <div class="toc-item"><div class="toc-number">2</div> <span>AD vs AP & Types de Dégâts</span></div>
+            <div class="toc-item"><div class="toc-number">3</div> <span>Toutes les Stats (Pen, Sustain, Hâte, Def)</span></div>
+            <div class="toc-item"><div class="toc-number">4</div> <span>Anatomie des Objets (Passifs vs Actifs)</span></div>
+            <div class="toc-item"><div class="toc-number">5</div> <span>Altérations d'État & Contrôles de Foule</span></div>
+            <div class="toc-item"><div class="toc-number">6</div> <span>Spécial ARAM: MAYHEM (Augments & Strats)</span></div>
+        </div>
+    </div>
+
+    <!-- MODULE 1 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon">01</div>
+            <h2>Introduction & Mentalité ARAM</h2>
+        </div>
+        <p>Bienvenue dans League of Legends ! Contrairement à la Faille de l'Invocateur classique (5v5 sur 3 voies avec jungle), l'<strong>ARAM (All Random All Mid)</strong> se déroule sur l'Abîme Hurlant : une seule voie enneigée, 10 champions en permanence au même endroit, et du combat non-stop !</p>
+        
+        <h3>Les 4 Règles d'Or de l'ARAM :</h3>
+        <ul>
+            <li><strong>Pas de Rappel à la base (No Back) :</strong> Tu ne peux pas régénérer tes PV en rentrant à la base. Tu dois mourir pour pouvoir acheter des objets !</li>
+            <li><strong>Achat uniquement à la mort :</strong> Une fois sorti de la zone d'apparition au début, la boutique se ferme. Pour dépenser ton or, il faut mourir.</li>
+            <li><strong>Portails Hextech & Reliques :</strong> Utilise les portails près de ton Nexus pour rejoindre le front instantanément. Des reliques de soins sont disposées sur le bord de la carte pour vous soigner, toi et ton équipe.</li>
+            <li><strong>Sort d'Invocateur Snowball (Marquage/Rush) :</strong> Lance une boule de neige ! Si elle touche un ennemi, réactive le sort pour te téléporter directement sur lui. C'est l'outil indispensable pour les combattants et tanks !</li>
+        </ul>
+
+        <div class="callout">
+            <div class="callout-title">💡 Conseil de Stratège débutant</div>
+            Ne garde pas 4 000 pièces d'or sur toi en essayant de survivre avec 50 PV ! Si la vague de sbires est poussée et que tes alliés sont là, c'est parfois une excellente décision de mourir pour revenir 15 secondes plus tard avec 2 objets complets et balayer l'équipe adverse.
+        </div>
+    </div>
+
+    <!-- MODULE 2 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon">02</div>
+            <h2>AD vs AP & Types de Dégâts</h2>
+        </div>
+        <p>Dans League of Legends, les dégâts et la puissance de ton champion reposent sur deux grandes familles : les <strong>Dégâts d'Attaque (AD)</strong> et la <strong>Puissance Magique (AP)</strong>.</p>
+
+        <img src="assets/lol_stats_ad_ap.jpg" alt="AD vs AP Infographic" class="guide-image">
+
+        <div class="stat-grid">
+            <div class="stat-box ad">
+                <div class="stat-box-title">🗡️ AD (Attack Damage / Dégâts Physiques)</div>
+                <p><strong>Couleur du texte :</strong> Orange / Rouge</p>
+                <p><strong>C'est quoi ?</strong> Augmente les dégâts de tes <em>auto-attaques</em> (clic droit) et des compétences physiques.</p>
+                <p><strong>Champs typiques :</strong> Tireurs/ADC (Jinx, Caitlyn), Assassins (Zed, Talon), Combattants (Garen, Darius).</p>
+                <p><strong>Contré par :</strong> L'Armure (Armor).</p>
+            </div>
+            <div class="stat-box ap">
+                <div class="stat-box-title">🔮 AP (Ability Power / Puissance Magique)</div>
+                <p><strong>Couleur du texte :</strong> Bleu / Violet</p>
+                <p><strong>C'est quoi ?</strong> Augmente la puissance des <em>sorts magiques</em> et compétences à ratio AP.</p>
+                <p><strong>Champs typiques :</strong> Mages (Lux, Veigar, Ahri), Assassins Magiques (Akali, Katarina), Enchanteurs.</p>
+                <p><strong>Contré par :</strong> La Résistance Magique (Magic Resist).</p>
+            </div>
+        </div>
+
+        <h3>Comment savoir si un sort ou un item est AD ou AP ?</h3>
+        <p>Sur l'écran, regarde la couleur des chiffres d'un sort quand tu survoles sa description avec ta souris :</p>
+        <ul>
+            <li><strong>Chiffre Orange <span class="tag tag-ad">(+AD)</span> :</strong> Le sort devient plus fort si tu achètes des objets AD (Épées, Léthalité, Crit).</li>
+            <li><strong>Chiffre Vert/Bleu <span class="tag tag-ap">(+AP)</span> :</strong> Le sort devient plus fort si tu achètes des objets AP (Bâtons, Tome amplificateur).</li>
+            <li><strong>Chiffre Jaune/Vert foncé (+Armor/PV) :</strong> Certains tanks (Malphite, Rammus) augmentent leurs dégâts avec leurs PV ou leur Armure !</li>
+        </ul>
+
+        <h3>Les 3 Types de Dégâts infligés :</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Type de Dégâts</th>
+                    <th>Couleur à l'écran</th>
+                    <th>Propriété & Réduction</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Physiques</strong></td>
+                    <td><span class="tag tag-ad">Orange</span></td>
+                    <td>Réduits par l'Armure de la cible. Pénétrés par la Léthalité & Armor Pen.</td>
+                </tr>
+                <tr>
+                    <td><strong>Magiques</strong></td>
+                    <td><span class="tag tag-ap">Bleu / Violet</span></td>
+                    <td>Réduits par la Résistance Magique (RM). Pénétrés par la Pénétration Magique.</td>
+                </tr>
+                <tr>
+                    <td><strong>Bruts (True Damage)</strong></td>
+                    <td><span class="tag tag-true">Blanc / Jaune</span></td>
+                    <td><strong>IGNORE L'ARMURE ET LA RM !</strong> Inflige le montant exact indiqué. (Ex: Ulty de Darius, Vayne).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- MODULE 3 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon">03</div>
+            <h2>Le Dictionnaire Complet des Statistiques</h2>
+        </div>
+        <p>Voici l'explication simple de toutes les autres statistiques inscrites sur vos objets :</p>
+
+        <h3>1. Vitesse d'Attaque & Coup Critique (Offensif AD)</h3>
+        <ul>
+            <li><strong>Vitesse d'Attaque (Attack Speed) :</strong> Augmente le nombre d'auto-attaques par seconde (ex: 1.5 = 1.5 coups/sec).</li>
+            <li><strong>Chances de Coup Critique (Crit Chance) :</strong> Pourcentage de chance que ton auto-attaque inflige des dégâts bonus considérables (+75% à +100% dégâts). Max 100%.</li>
+        </ul>
+
+        <h3>2. Hâte de Compétence (Ability Haste / CDR)</h3>
+        <p>La Hâte de Compétence permet de relancer tes sorts plus souvent en réduisant leurs temps de recharge (Cooldowns). Plus tu en as, plus tu spammes tes compétences !</p>
+
+        <h3>3. Pénétration d'Armure & Pénétration Magique</h3>
+        <p>Quand l'ennemi achète de la défense (Armure ou RM), tes dégâts baissent. La Pénétration permet d'ignorer cette défense :</p>
+        <ul>
+            <li><strong>Léthalité (Flat Armor Pen) :</strong> Retire un montant FIXE d'armure. Idéal contre les cibles fragiles sans armure (Mages, ADC).</li>
+            <li><strong>Pénétration d'Armure en % (Ex: Salutation de Dominik) :</strong> Retire un POURCENTAGE de l'armure. Indispensable contre les GROS Tanks !</li>
+            <li><strong>Pénétration Magique (Flat Pen / % Pen) :</strong> Même fonctionnement mais pour réduire la Résistance Magique en jouant Mage.</li>
+        </ul>
+
+        <h3>4. Sustain : Vol de Vie, Vampirisme & Omnivamp</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Statistique</th>
+                    <th>Comment ça fonctionne ?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Vol de Vie (Life Steal)</strong></td>
+                    <td>Te soigne uniquement sur les dégâts de tes <strong>auto-attaques</strong> physiques.</td>
+                </tr>
+                <tr>
+                    <td><strong>Vampirisme Physique</strong></td>
+                    <td>Te soigne sur TOUS les dégâts physiques (auto-attaques + sorts physiques).</td>
+                </tr>
+                <tr>
+                    <td><strong>Omnivamp (Omnivampirisme)</strong></td>
+                    <td>Te soigne sur <strong>TOUS les dégâts infligés</strong> (Magiques, Physiques, Bruts). <em>(Efficacité réduite à 33% sur les compétences de zone/AoE)</em>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ L'effet Anti-Soin : Hémorragie (Grievous Wounds)</div>
+            Si l'équipe adverse possède des champions qui se soignent énormément (Aatrox, Warwick, Yuumi, Soraka, Volibear), tu DOIS acheter un objet avec l'effet <strong>Hémorragie (Grievous Wounds)</strong>. Cet effet réduit tous les soins reçus par la cible de 40% !<br>
+            <em>Exemples d'objets anti-soin : Marque-bourreau (AD), Orbe d'oubli (AP), Vêtement de ronces / Cotte de mailles (Tank).</em>
+        </div>
+    </div>
+
+    <!-- MODULE 4 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon">04</div>
+            <h2>Anatomie des Objets : Passifs vs Actifs</h2>
+        </div>
+        <p>Dans la boutique de League of Legends, chaque objet complet apporte des statistiques brutes, mais surtout des effets uniques.</p>
+
+        <img src="assets/lol_item_anatomy.jpg" alt="Item Anatomy Infographic" class="guide-image">
+
+        <h3>Passif vs Actif d'un Objet :</h3>
+        <ul>
+            <li><strong>Passif d'un objet (Automatique) :</strong> Fonctionne tout seul en arrière-plan dès que tu possèdes l'objet. Par exemple : <em>"Inflige des dégâts de brûlure quand tu touches avec un sort"</em> (Liandry) ou <em>"Accorde du bouclier quand tu tombes sous 30% PV"</em> (Gage de Sterak / Arc-bouclier).</li>
+            <li><strong>Actif d'un objet (Manuel !) :</strong> L'objet est placé dans une case d'inventaire numérotée de 1 à 6. Tu DOIS appuyer sur la touche correspondante (ex: 1, 2, 3 ou une touche raccourci) pour déclencher l'effet ! Par exemple : <em>Sablier de Zhonya (Deviens invulnérable en stase pendant 2.5s)</em> ou <em>Ceinture-roquette Hextech (Fait un petit dash en avant)</em>.</li>
+        </ul>
+
+        <div class="callout">
+            <div class="callout-title">⚠️ Attention aux Passifs Nommés (Unique Passives)</div>
+            Si deux objets ont un passif avec le <strong>MÊME NOM</strong> (par exemple <em>Lame d'Ombre</em> ou <em>Ligne de Vie</em>), leurs effets ne se cumulent PAS ! Tu ne recevras l'effet qu'une seule fois. Vérifie toujours le nom des passifs.
+        </div>
+    </div>
+
+    <!-- MODULE 5 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon">05</div>
+            <h2>Altérations d'État & Contrôles de Foule (CC)</h2>
+        </div>
+        <p>Les Contrôles de Foule (Crowd Control ou CC) sont les sortilèges d'entrave qui empêchent un ennemi de jouer ou de se déplacer.</p>
+
+        <img src="assets/lol_status_cc_guide.jpg" alt="CC Guide Infographic" class="guide-image">
+
+        <h3>Les Principaux Effets de CC :</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom du CC</th>
+                    <th>Déplacement ?</th>
+                    <th>Sorts & Attaques ?</th>
+                    <th>Notes & Détails</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="tag tag-cc">Étourdissement (Stun)</span></td>
+                    <td>❌ Bloqué</td>
+                    <td>❌ Bloqué</td>
+                    <td>Hard CC. La cible est totalement immobile et inerte.</td>
+                </tr>
+                <tr>
+                    <td><span class="tag tag-cc">Immobilisation (Root / Snare)</span></td>
+                    <td>❌ Bloqué</td>
+                    <td>✅ Autorisé !</td>
+                    <td>Empêche de marcher ou de dash, mais la cible PEUT attaquer et lancer des sorts sur place !</td>
+                </tr>
+                <tr>
+                    <td><span class="tag tag-cc">Silence</span></td>
+                    <td>✅ Autorisé</td>
+                    <td>❌ Sorts bloqués</td>
+                    <td>Empêche de lancer le moindre sort. La cible peut marcher et auto-attaquer.</td>
+                </tr>
+                <tr>
+                    <td><span class="tag tag-cc">Projection (Knockup / Airborne)</span></td>
+                    <td>❌ Bloqué</td>
+                    <td>❌ Bloqué</td>
+                    <td><strong>LE ROI DES CC !</strong> La cible est projetée dans les airs. <em>Ne peut pas être réduit par la Ténacité ni annulé par la Purge !</em></td>
+                </tr>
+                <tr>
+                    <td><span class="tag tag-cc">Suppression</span></td>
+                    <td>❌ Bloqué</td>
+                    <td>❌ Bloqué</td>
+                    <td>(Ex: Ultys de Malzahar, Warwick). Inannulable par la Purge d'invocateur. Nécessite un <em>Bandeau de Purge (QSS)</em>.</td>
+                </tr>
+                <tr>
+                    <td><span class="tag tag-cc">Aveuglement (Blind)</span></td>
+                    <td>✅ Autorisé</td>
+                    <td>Attaques râtées</td>
+                    <td>(Ex: Flèche de Teemo). Les auto-attaques n'infligent absolument AUCUN dégât pendant la durée.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Qu'est-ce que la Ténacité (Tenacity) ?</h3>
+        <p>La <strong>Ténacité</strong> est une statistique défensive qui réduit la DURÉE des Stuns, Roots, Silences et Ralentissements ! Si tu as 30% de Ténacité, un Stun de 2 secondes ne durera que 1.4 seconde sur toi. <em>(Attention : n'affecte pas les Knockups ni les Suppressions).</em></p>
+    </div>
+
+    <!-- MODULE 6 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon">06</div>
+            <h2>Spécial ARAM: MAYHEM (Optimisations & Chaos)</h2>
+        </div>
+        <p>Le mode <strong>ARAM: MAYHEM</strong> pousse le chaos d'ARAM au niveau supérieur en introduisant le système des <strong>Optimisations (Augments)</strong> !</p>
+
+        <h3>1. Les Tiers d'Optimisations (Augments)</h3>
+        <p>Au cours de la partie, tu seras invité à choisir parmi 3 cartes d'Optimisations. Elles existent en 3 raretés :</p>
+        <ul>
+            <li><strong>Argent (Silver) :</strong> Bonus statistiques confortables, hâte de compétence, vitesse de déplacement ou utilitaires.</li>
+            <li><strong>Or (Gold) :</strong> Effets puissants (ex: compétences qui appliquent des effets à l'impact, boucliers massifs, réinitialisations de cooldowns).</li>
+            <li><strong>Prismatique (Prismatic) :</strong> Effets Game-Changer qui modifient complètement le gameplay (ex: ultime utilisable deux fois, dégâts bruts démesurés, invulnérabilité sous conditions).</li>
+        </ul>
+
+        <h3>2. Objets Prismatiques</h3>
+        <p>Dans ARAM: Mayhem, tu peux également acquérir ou tirer au sort des <strong>Objets Prismatiques</strong>. Ce me sont des objets ultra-puissants dotés de statistiques hors-normes et d'effets passifs démultipliés.</p>
+
+        <h3>3. Conseils Pro pour Gagner en ARAM: MAYHEM :</h3>
+        <ol>
+            <li><strong>Cherche la Synergie, pas juste la Rareté :</strong> Une Augment Or ou Argent qui s'accorde parfaitement avec le kit de ton champion est souvent meilleure qu'une Augment Prismatique hors-sujet !</li>
+            <li><strong>Adapte ton Build :</strong> Si tu obtiens une Augment qui donne des ratios AP sur tes auto-attaques, envisage de faire des objets Vitesse d'Attaque + AP !</li>
+            <li><strong>Amuse-toi avec les Combos :</strong> Ne reste pas bloqué sur les builds recommandés traditionnels. ARAM Mayhem est fait pour tester des combinaisons complètement déjantées.</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
