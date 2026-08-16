@@ -1,0 +1,16 @@
+name: Suggestion de contenu / Content Suggestion
+description: Proposer un nouveau chapitre, un exemple de champion ou une amélioration du cours.
+title: "[SUGGESTION]: "
+labels: ["enhancement", "documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: Merci de contribuer à l'amélioration du guide LoL 101 ARAM & Mayhem !
+  - type: textarea
+    id: description
+    attributes:
+      label: Description de la suggestion
+      description: Expliquez en détail l'ajout ou la modification souhaitée.
+      placeholder: Ex: Ajouter une section sur le fonctionnement des Objets Prismatiques spécifiques...
+    validations:
+      required: true

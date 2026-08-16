@@ -1,12 +1,25 @@
 # 🎮 League of Legends - Cours 101 ARAM & ARAM: MAYHEM
 
-[![League of Legends](https://img.shields.io/badge/Game-League%20of%20Legends-blue?style=for-the-badge&logo=leagueoflegends)](https://eune.leagueoflegends.com/)
-[![Mode](https://img.shields.io/badge/Mode-ARAM%20%26%20MAYHEM-cyan?style=for-the-badge)](#-sommaire-du-cours)
-[![Format](https://img.shields.io/badge/Format-PDF%20%2B%20HTML-gold?style=for-the-badge)](#-g%C3%A9n%C3%A9ration-du-pdf-en-local)
-[![SEO Ready](https://img.shields.io/badge/SEO-Optimized-brightgreen?style=for-the-badge)](index.html)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+<p align="center">
+  <img src="assets/lol_aram_mayhem_banner.jpg" alt="League of Legends ARAM Mayhem Banner" width="100%" style="border-radius: 8px;">
+</p>
+
+<p align="center">
+  <a href="https://github.com/ArthureCodage/lol-aram-101-guide/stargazers"><img src="https://img.shields.io/github/stars/ArthureCodage/lol-aram-101-guide?style=for-the-badge&color=gold" alt="GitHub Stars"></a>
+  <a href="https://github.com/ArthureCodage/lol-aram-101-guide/network/members"><img src="https://img.shields.io/github/forks/ArthureCodage/lol-aram-101-guide?style=for-the-badge&color=cyan" alt="GitHub Forks"></a>
+  <a href="https://arthurecodage.github.io/lol-aram-101-guide/"><img src="https://img.shields.io/badge/Live_Site-GitHub_Pages-00cfbc?style=for-the-badge&logo=github" alt="Live Site"></a>
+  <a href="https://github.com/ArthureCodage/lol-aram-101-guide/releases/latest"><img src="https://img.shields.io/badge/Download-PDF_Guide-ff5252?style=for-the-badge&logo=adobeacrobatreader" alt="Download PDF"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License"></a>
+</p>
+
+---
+
+> ⭐️ **Si ce guide vous a été utile ou si vous souhaitez soutenir le projet, n'hésitez pas à laisser une étoile (Star) sur le dépôt !**
 
 Un guide complet, pédagogique et visuellement travaillé pour enseigner League of Legends à un ami débutant, spécialement conçu pour les joueurs de **ARAM (All Random All Mid)** et du mode spécial **ARAM: MAYHEM**.
+
+🌐 **Accéder au site web en direct :** [https://arthurecodage.github.io/lol-aram-101-guide/](https://arthurecodage.github.io/lol-aram-101-guide/)  
+📥 **Télécharger la dernière version PDF :** [Releases / Téléchargements](https://github.com/ArthureCodage/lol-aram-101-guide/releases/tag/v1.0.0)
 
 ---
 
@@ -23,45 +36,34 @@ Un guide complet, pédagogique et visuellement travaillé pour enseigner League 
 
 ## 📜 Sommaire du Cours
 
-1. **[Introduction & Mentalité ARAM](index.html#introduction)**
+1. **[Introduction & Mentalité ARAM](https://arthurecodage.github.io/lol-aram-101-guide/#introduction)**
    - Les 4 règles d'or (No Back, Achat à la mort, Portails Hextech, Snowball/Marquage).
    - Gestion de l'or et timing de mort stratégique.
-2. **[AD vs AP & Types de Dégâts](index.html#ad-vs-ap)**
+2. **[AD vs AP & Types de Dégâts](https://arthurecodage.github.io/lol-aram-101-guide/#ad-vs-ap)**
    - Distinguer les dégâts AD, AP et Bruts (True Damage).
    - Comment identifier si une compétence demande de l'AD ou de l'AP.
-3. **[Le Dictionnaire Complet des Statistiques](index.html#statistiques)**
+3. **[Le Dictionnaire Complet des Statistiques](https://arthurecodage.github.io/lol-aram-101-guide/#statistiques)**
    - Vitesse d'Attaque & Coup Critique.
    - Hâte de compétence (Ability Haste / CDR).
    - Léthalité vs Pénétration d'Armure en %.
    - Vol de Vie, Vampirisme Physique & Omnivamp.
    - L'effet Anti-Soin : **Hémorragie (Grievous Wounds)**.
-4. **[Anatomie des Objets (Passifs vs Actifs)](index.html#objets)**
+4. **[Anatomie des Objets (Passifs vs Actifs)](https://arthurecodage.github.io/lol-aram-101-guide/#objets)**
    - Effets automatiques vs Boutons à presser (raccourcis 1-6).
    - Règle d'or sur les Passifs Nommés (Unique Passives).
-5. **[Altérations d'État & Contrôles de Foule (CC)](index.html#cc-status)**
+5. **[Altérations d'État & Contrôles de Foule (CC)](https://arthurecodage.github.io/lol-aram-101-guide/#cc-status)**
    - Hard CC vs Soft CC.
    - Pourquoi le Knockup est le roi des CC.
    - Rôle et fonctionnement de la Ténacité.
-6. **[Spécial ARAM: MAYHEM](index.html#aram-mayhem)**
+6. **[Spécial ARAM: MAYHEM](https://arthurecodage.github.io/lol-aram-101-guide/#aram-mayhem)**
    - Comprendre le système d'Augments (Argent, Or, Prismatique).
    - Synergies avec les Objets Prismatiques.
-
----
-
-## 🔍 Mots-clés & Thématiques SEO (Search Engine Optimization)
-
-- **Mots-clés principaux :** `League of Legends`, `Guide LoL débutant 101`, `ARAM Mayhem`, `AD vs AP LoL`, `Vol de vie vs Omnivamp`, `Knockup Ténacité`, `Objets passifs et actifs LoL`, `Hémorragie Grievous Wounds`.
-- **Balisage sémantique :** HTML5 (`<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`), métadonnées Open Graph & Twitter Cards, microdonnées JSON-LD Schema.org (`Course`, `FAQPage`).
 
 ---
 
 ## 🚀 Génération du PDF en Local
 
 Ce dépôt inclut une page web HTML/CSS moderne avec un thème esport sombre, ainsi qu'un script Node.js automatisé avec `puppeteer-core` pour compiler le guide en un fichier PDF haute résolution A4.
-
-### Prérequis
-- [Node.js](https://nodejs.org/) (v16+)
-- Microsoft Edge ou Google Chrome installé sur votre machine.
 
 ### Installation & Compilation PDF
 
@@ -77,30 +79,13 @@ npm install
 npm run build:pdf
 ```
 
-Le fichier PDF sera automatiquement créé à la racine du projet sous le nom :  
-📁 `League_of_Legends_ARAM_101_Guide.pdf`
-
 ---
 
-## 📂 Structure du Dépôt
+## 🤝 Comment Contribuer ?
 
-```
-lol-aram-101-guide/
-├── assets/
-│   ├── lol_stats_ad_ap.jpg
-│   ├── lol_item_anatomy.jpg
-│   ├── lol_status_cc_guide.jpg
-│   └── lol_aram_mayhem_banner.jpg
-├── index.html                           # Cours complet au format HTML/CSS (SEO Ready)
-├── sitemap.xml                          # Sitemap XML pour Google / Bing
-├── robots.txt                           # Fichier d'instructions robots de recherche
-├── generate_pdf.js                      # Script de compilation PDF via Puppeteer/Edge
-├── League_of_Legends_ARAM_101_Guide.pdf # Document PDF final compilé
-├── package.json
-├── .gitignore
-├── LICENSE
-└── README.md
-```
+Les contributions sont les bienvenues ! 
+- Pour proposer une amélioration ou signaler une coquille, ouvrez une **[Issue](https://github.com/ArthureCodage/lol-aram-101-guide/issues)**.
+- Pour ajouter du contenu ou traduire le guide en anglais, soumettez une **[Pull Request](https://github.com/ArthureCodage/lol-aram-101-guide/pulls)**.
 
 ---
 

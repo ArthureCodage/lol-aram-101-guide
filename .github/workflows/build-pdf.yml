@@ -1,0 +1,37 @@
+name: Generate PDF & Publish Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'index.html'
+      - 'assets/**'
+      - 'generate_pdf.js'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies & Playwright Browser
+        run: |
+          npm install
+          npx playwright install chromium --with-deps || true
+
+      - name: Build PDF
+        run: node generate_pdf.js
+
+      - name: Commit Updated PDF if Changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add League_of_Legends_ARAM_101_Guide.pdf
+          git diff-index --quiet HEAD || (git commit -m "auto: Rebuild PDF [skip ci]" && git push)
