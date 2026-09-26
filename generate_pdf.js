@@ -1,14 +1,20 @@
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 const path = require('path');
+const fs = require('fs');
 
 (async () => {
     try {
-        console.log('🚀 Launching Edge browser for PDF generation...');
-        const browser = await puppeteer.launch({
-            executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+        console.log('🚀 Launching browser for PDF generation...');
+        const launchOptions = {
             headless: true,
             args: ['--no-sandbox', '--disable-setuid-sandbox']
-        });
+        };
+
+        if (process.env.PUPPETEER_EXECUTABLE_PATH) {
+            launchOptions.executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
+        }
+
+        const browser = await puppeteer.launch(launchOptions);
 
         // 1. Generate French PDF
         const pageFR = await browser.newPage();
